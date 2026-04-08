@@ -1,5 +1,4 @@
 # MORES 社区版
-# MORES 社区版
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
@@ -54,3 +53,46 @@ fn main() {
 ---
 
 ## ✅ 提交信息填
+
+## 🚀 快速体验
+
+无需安装，一条命令启动 API 服务：
+
+```bash
+docker run -p 8000:8000 mores-core:api
+启动后，打开下方网页即可体验决策引擎：
+
+👉 MORES 决策引擎演示（需先启动服务）
+
+或使用 curl 测试：
+
+```bash
+curl -X POST http://localhost:8000/decide \
+  -H "Content-Type: application/json" \
+  -d '{"input":"这是一个测试"}'
+```
+
+---
+
+📊 项目状态
+
+https://gitee.com/moshi-lab/mores-community/badge/star.svg
+https://img.shields.io/badge/License-Apache%202.0-blue.svg
+https://img.shields.io/badge/Rust-1.70+-orange.svg
+https://img.shields.io/badge/Python-3.7+-blue.svg
+
+---
+
+🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+请阅读 CONTRIBUTING.md 了解详情。
+
+---
+
+📄 许可证
+
+Apache 2.0 © MORES Team
+
+```
