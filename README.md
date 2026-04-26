@@ -1,3 +1,5 @@
+> 🌍 **GitHub 镜像**：https://github.com/MORES121/mores-community
+
 # MORES 社区版
 
 官网地址：https://kairosmores.cn
