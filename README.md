@@ -1,5 +1,5 @@
 # MORES 社区版
-
+🌍 GitHub 镜像：https://github.com/MORES121/mores-community
 官网地址：https://kairosmores.cn
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
