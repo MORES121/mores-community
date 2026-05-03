@@ -1,0 +1,69 @@
+# .github/workflows/sync-from-gitee.yml
+name: Sync from Gitee Private to GitHub Public
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          path: target_repo
+
+      - name: Clone private Gitee repo
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          GITEE_USER: ${{ secrets.GITEE_USER }}
+        run: |
+          git clone https://$GITEE_USER:$GITEE_TOKEN@gitee.com/$GITEE_USER/mores-core.git private_repo
+
+      - name: 安全过滤 - 生成公开版本
+        run: |
+          mkdir -p public_version
+          cp private_repo/LICENSE public_version/ 2>/dev/null || true
+          cp private_repo/README.md public_version/ 2>/dev/null || true
+          cp -r private_repo/src public_version/ 2>/dev/null || true
+          rm -rf public_version/src/ascend
+          rm -rf public_version/src/cambricon
+          rm -rf public_version/src/huawei_910
+          cp -r private_repo/examples public_version/ 2>/dev/null || true
+          cp -r private_repo/python public_version/ 2>/dev/null || true
+          cp private_repo/Cargo.toml public_version/ 2>/dev/null || true
+          
+          mkdir -p public_version/src/ascend
+          cat > public_version/src/ascend/mod.rs << 'EOF'
+          // 昇腾适配层（私有实现）
+          pub fn init_ascend() -> Result<(), String> {
+              Err("完整昇腾适配层仅在私有仓库中提供".into())
+          }
+          EOF
+          
+          mkdir -p public_version/src/cambricon
+          cat > public_version/src/cambricon/mod.rs << 'EOF'
+          // 寒武纪适配层（私有实现）
+          pub fn init_cambricon() -> Result<(), String> {
+              Err("完整寒武纪适配层仅在私有仓库中提供".into())
+          }
+          EOF
+          
+          mkdir -p public_version/src/huawei_910
+          cat > public_version/src/huawei_910/mod.rs << 'EOF'
+          // 华为云910适配层（私有实现）
+          pub fn init_huawei_910() -> Result<(), String> {
+              Err("完整华为云910适配层仅在私有仓库中提供".into())
+          }
+          EOF
+
+      - name: 推送到公开仓库
+        run: |
+          cd target_repo
+          git config user.name "Morris Sync Bot"
+          git config user.email "sync@mores.xxx"
+          find . -mindepth 1 -not -path './.git*' -delete
+          cp -r ../public_version/* .
+          git add .
+          git diff --staged --quiet || git commit -m "🔒 安全同步: 从Gitee私有库过滤后发布"
+          git push origin main
