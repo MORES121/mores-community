@@ -18,7 +18,10 @@ jobs:
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
           GITEE_USER: ${{ secrets.GITEE_USER }}
         run: |
-          git clone https://$GITEE_USER:$GITEE_TOKEN@gitee.com/$GITEE_USER/mores-core.git private_repo
+          # 使用 .netrc 文件进行认证
+          echo "machine gitee.com login $GITEE_USER password $GITEE_TOKEN" > ~/.netrc
+          chmod 600 ~/.netrc
+          git clone https://gitee.com/$GITEE_USER/mores-core.git private_repo
 
       - name: 安全过滤 - 生成公开版本
         run: |
