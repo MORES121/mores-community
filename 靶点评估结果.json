@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Target_C",
+    "stability": 0.4655,
+    "risk": "MEDIUM",
+    "raw_score": 0.5534
+  },
+  {
+    "name": "Target_A",
+    "stability": 0.4042,
+    "risk": "MEDIUM",
+    "raw_score": 0.4928
+  },
+  {
+    "name": "Target_B",
+    "stability": 0.2468,
+    "risk": "HIGH",
+    "raw_score": 0.3354
+  }
+]
