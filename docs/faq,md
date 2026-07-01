@@ -1,0 +1,109 @@
+```markdown
+# 常见问题 FAQ
+
+## 📦 安装问题
+
+### Q: 提示 Docker 未安装？
+**A:** 请访问 https://docker.com 下载安装 Docker Desktop。  
+Windows 用户安装后需要重启电脑。
+
+### Q: `docker run` 提示找不到镜像？
+**A:** 需要先构建镜像：
+```bash
+cd /c/mores-core
+docker build -t mores-core:api .
+```
+
+Q: 国内拉取镜像很慢怎么办？
+
+A: 配置国内镜像源（阿里云、中科大）：
+
+· 打开 Docker Desktop → Settings → Docker Engine
+· 添加 "registry-mirrors": ["https://mirror.ccs.tencentyun.com"]
+
+---
+
+🚀 运行问题
+
+Q: 启动服务后端口被占用？
+
+A: 修改端口映射：
+
+```bash
+docker run -p 8001:8000 mores-core:api
+```
+
+然后访问 http://localhost:8001
+
+Q: API 返回空结果或解析失败？
+
+A: 检查请求格式是否为 JSON：
+
+```bash
+curl -X POST http://localhost:8000/decide \
+  -H "Content-Type: application/json" \
+  -d '{"input":"测试内容"}'
+```
+
+Q: 网页显示「连接失败」？
+
+A: 1. 确认 API 服务已启动
+
+1. 检查防火墙是否允许 8000 端口
+2. 将 localhost 改为 127.0.0.1
+
+---
+
+💡 使用问题
+
+Q: 如何添加自定义规则？
+
+A: 在请求中添加 rules 字段：
+
+```json
+{
+  "input": "测试内容",
+  "threshold": 0.7,
+  "rules": [
+    {"name": "规则1", "condition": "关键词", "action": "通过", "weight": 0.8}
+  ]
+}
+```
+
+Q: 支持中文吗？
+
+A: 完全支持中文输入和输出。
+
+Q: 如何查看日志？
+
+A: 运行容器时添加日志输出：
+
+```bash
+docker run -p 8000:8000 mores-core:api
+```
+
+所有输出会显示在终端。
+
+---
+
+🐛 问题反馈
+
+提交 Issue 时请提供：
+
+1. 操作系统版本（Windows 10/11、macOS、Linux）
+2. Docker 版本（docker --version）
+3. 错误日志截图
+4. 复现步骤
+
+👉 提交 Issue(https://gitee.com/moshi-lab/mores-community/issues)
+
+```
+
+---
+
+## ✅ 然后提交
+
+- 提交信息：`添加常见问题 FAQ`
+- 点击「提交」
+
+---
