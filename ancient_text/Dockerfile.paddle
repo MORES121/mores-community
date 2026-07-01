@@ -1,0 +1,23 @@
+FROM paddlepaddle/paddle:2.6.2
+
+RUN apt-get update && apt-get install -y dos2unix && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY inference_paddle.py .
+COPY run.sh .
+
+RUN dos2unix /app/run.sh
+
+# 彻底解决依赖问题
+RUN pip uninstall -y numpy || true
+RUN pip install numpy==1.23.5 --force-reinstall --no-cache-dir --no-deps
+
+# 安装 paddleocr 及其所有依赖
+RUN pip install paddleocr==2.7.0.3 --no-deps
+RUN pip install opencv-python-headless==4.8.1.78
+RUN pip install shapely pyclipper lmdb tqdm visualdl rapidfuzz cython lxml premailer openpyxl attrdict python-bidi scikit-image
+
+RUN chmod +x /app/run.sh
+
+CMD ["/app/run.sh"]
