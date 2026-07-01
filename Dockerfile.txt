@@ -1,0 +1,57 @@
+ARG BASE_IMAGE=crpi-q4qg69o2szruzmaa.cn-beijing.personal.cr.aliyuncs.com/enn_smart/competition_test:r2025a-py311-v1
+FROM ${BASE_IMAGE}
+
+# ========== MORES 全自动适应环境 v29 ==========
+
+# 1. 创建所有可能需要的目录（多级备选）
+RUN mkdir -p /saisdata /saisdata/40 /saisdata_local /saisdata_local/40 /saisresult && \
+    mkdir -p /tmp/mores_workspace /tmp/saisdata_workspace && \
+    mkdir -p /saisdata/results /saisdata/logs /saisdata/inference /saisdata/env && \
+    chmod 777 /saisdata /saisdata/40 /saisdata_local /saisdata_local/40 /saisresult /tmp/mores_workspace /tmp/saisdata_workspace && \
+    chmod 777 /saisdata/results /saisdata/logs /saisdata/inference /saisdata/env 2>/dev/null || true
+
+# 2. 智能软链接：将只读路径指向可写空间
+RUN ln -sf /tmp/mores_workspace /saisdata_local 2>/dev/null || true && \
+    ln -sf /tmp/mores_workspace /saisdata/results 2>/dev/null || true && \
+    ln -sf /tmp/mores_workspace /saisdata/logs 2>/dev/null || true && \
+    ln -sf /tmp/mores_workspace /saisdata/inference 2>/dev/null || true && \
+    ln -sf /tmp/mores_workspace /saisdata/env 2>/dev/null || true
+
+# 3. 环境变量（可被外部覆盖）
+ENV SAISDATA_ROOT=/saisdata/40
+ENV LOCAL_SAISDATA=/tmp/mores_workspace
+ENV MORES_ADAPTIVE_LEVEL=3
+
+# 4. 诊断：输出环境信息
+RUN echo "=== MORES v29 Environment Setup ===" && \
+    echo "SAISDATA_ROOT=${SAISDATA_ROOT}" && \
+    echo "LOCAL_SAISDATA=${LOCAL_SAISDATA}" && \
+    ls -la /saisdata 2>/dev/null || echo "/saisdata not accessible" && \
+    ls -la /tmp/mores_workspace
+
+WORKDIR /app
+
+# 5. 安装依赖
+COPY submission/requirements.txt /app/submission/requirements.txt
+RUN pip3 install --no-cache-dir -r /app/submission/requirements.txt
+
+# 6. 拷贝代码（含混淆核心）
+COPY submission /app/submission
+COPY submission/run.sh /app/run.sh
+RUN chmod +x /app/run.sh /app/submission/start_infer.sh
+
+# 7. 创建入口点脚本（动态适应）
+RUN echo '#!/bin/bash' > /entrypoint.sh && \
+    echo 'echo "[MORES] Starting adaptive entrypoint..."' >> /entrypoint.sh && \
+    echo '# 动态检测并修复环境' >> /entrypoint.sh && \
+    echo 'if [ ! -w "/saisdata" ] && [ -w "/tmp" ]; then' >> /entrypoint.sh && \
+    echo '    echo "[MORES] /saisdata is read-only, using /tmp redirect"' >> /entrypoint.sh && \
+    echo '    export SAISDATA_ROOT=/tmp/saisdata_workspace' >> /entrypoint.sh && \
+    echo '    mkdir -p ${SAISDATA_ROOT}/40' >> /entrypoint.sh && \
+    echo 'fi' >> /entrypoint.sh && \
+    echo 'exec /app/run.sh' >> /entrypoint.sh && \
+    chmod +x /entrypoint.sh
+
+EXPOSE 8000 8001 5558
+
+ENTRYPOINT ["/entrypoint.sh"]
