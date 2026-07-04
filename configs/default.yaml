@@ -1,0 +1,79 @@
+# ============================================================
+# 树根杯 · 具身智能平衡重叉车挑战赛
+# 默认配置文件（优化版 v2.0）
+# ============================================================
+
+# ---------- 仿真环境配置 ----------
+simulation:
+  backend: "isaac_sim"
+  timestep: 0.02
+  max_steps: 5000
+  render_mode: "human"
+
+# ---------- 叉车物理参数 ----------
+forklift:
+  wheelbase: 1.2
+  track_width: 0.8
+  max_steering_angle: 30
+  max_speed: 2.5
+  max_fork_height: 2.0
+  fork_lift_speed: 0.2
+
+# ---------- 感知配置 ----------
+perception:
+  camera:
+    enabled: true
+    width: 640
+    height: 480
+    fps: 30
+  lidar:
+    enabled: false
+    range: 10.0
+    num_points: 360
+
+# ---------- 因果图配置 ----------
+causal_graph:
+  nodes:
+    - perception_error
+    - path_quality
+    - fork_alignment
+    - steering_angle
+    - speed
+    - fork_height
+    - load_stability
+    - collision_risk
+    - task_success
+  edges:
+    - ["perception_error", "path_quality"]
+    - ["perception_error", "fork_alignment"]
+    - ["path_quality", "steering_angle"]
+    - ["path_quality", "speed"]
+    - ["fork_alignment", "fork_height"]
+    - ["steering_angle", "load_stability"]
+    - ["fork_height", "load_stability"]
+    - ["speed", "collision_risk"]
+    - ["load_stability", "task_success"]
+    - ["collision_risk", "task_success"]
+
+# ---------- 反事实推演配置 ----------
+counterfactual:
+  num_alternatives: 7
+  rollout_steps: 50
+  score_weights:
+    stability: 0.35
+    success_rate: 0.45
+    efficiency: 0.20
+
+# ---------- 控制器配置 ----------
+controller:
+  pid:
+    kp: 2.0
+    ki: 0.10
+    kd: 0.03
+  max_steering_rate: 20
+
+# ---------- 日志配置 ----------
+logging:
+  level: "INFO"
+  save_decision_logs: true
+  log_dir: "logs/"
