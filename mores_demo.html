@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MORES 决策引擎演示</title>
+    <meta charset="utf-8">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            background: #f5f7fa;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1 { color: #1a1a2e; margin-bottom: 8px; }
+        .subtitle { color: #666; margin-bottom: 24px; font-size: 14px; }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background: #005a9e; }
+        .result {
+            background: #f0f0f0;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .status {
+            font-size: 12px;
+            color: #888;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .error { color: #d32f2f; background: #ffebee; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🧠 MORES 决策引擎</h1>
+        <div class="subtitle">可控可解释 · 古文字识别 · 昇腾适配</div>
+
+        <p>请输入需要判断的内容：</p>
+        <input type="text" id="inputText" placeholder="例如：这是一个甲骨文识别请求">
+
+        <p>可选：设置阈值（0-1，默认0.7）</p>
+        <input type="number" id="threshold" step="0.1" value="0.7">
+
+        <button onclick="callMORES()">🚀 开始决策</button>
+
+        <div class="result" id="result">💡 等待输入...</div>
+        <div class="status" id="status">服务状态：检测中...</div>
+    </div>
+
+    <script>
+        const API_URL = "http://localhost:8000/decide";
+
+        async function checkService() {
+            try {
+                const response = await fetch(API_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ input: "ping", rules: [] })
+                });
+                if (response.ok) {
+                    document.getElementById("status").innerHTML = "✅ 服务状态：已连接";
+                    document.getElementById("status").style.color = "#2e7d32";
+                } else {
+                    document.getElementById("status").innerHTML = "⚠️ 服务状态：响应异常";
+                }
+            } catch (error) {
+                document.getElementById("status").innerHTML = "❌ 服务状态：未启动（请运行 docker run -p 8000:8000 mores-core:api）";
+                document.getElementById("status").style.color = "#d32f2f";
+            }
+        }
+
+        async function callMORES() {
+            const input = document.getElementById("inputText").value.trim();
+            const threshold = parseFloat(document.getElementById("threshold").value);
+
+            if (!input) {
+                alert("请输入内容");
+                return;
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "🤔 思考中...";
+            resultDiv.classList.remove("error");
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ input: input, threshold: threshold, rules: [] })
+                });
+
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+                const data = await response.json();
+                resultDiv.innerHTML = `
+                    <strong>📋 决策结果：</strong> ${data.decision}<br><br>
+                    <strong>📊 置信度：</strong> ${(data.confidence * 100).toFixed(1)}%<br><br>
+                    <strong>💭 推理过程：</strong> ${data.reasoning}<br><br>
+                    <strong>⚙️ 触发规则：</strong> ${data.rules_triggered.length > 0 ? data.rules_triggered.join(", ") : "无"}
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 连接失败：${error.message}<br><br>请确保 MORES API 服务已启动。`;
+                resultDiv.classList.add("error");
+            }
+        }
+
+        checkService();
+        setInterval(checkService, 30000);
+    </script>
+</body>
+</html>

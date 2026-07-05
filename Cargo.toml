@@ -1,0 +1,27 @@
+[package]
+name = "mores-community"
+version = "0.1.0"
+edition = "2021"
+authors = ["MORES Team"]
+description = "墨睿思MORES社区版 — 可控可解释的决策引擎"
+license = "Apache-2.0"
+repository = "https://gitee.com/moshi-lab/mores-community"
+keywords = ["decision-engine", "ai", "ocr", "ascend"]
+categories = ["人工智能", "开发工具"]
+
+[lib]
+name = "mores_community"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[features]
+default = []
+ascend = []
+
+[dev-dependencies]
+
+[badges]
+gitee = { repository = "moshi-lab/mores-community" }
