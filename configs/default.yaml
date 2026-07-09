@@ -1,11 +1,11 @@
 # ============================================================
 # 树根杯 · 具身智能平衡重叉车挑战赛
-# 默认配置文件（效率优化版）
+# 默认配置文件（精细化优化版）
 # ============================================================
 
 simulation:
   backend: "isaac_sim"
-  timestep: 0.02
+  timestep: 0.03
   max_steps: 5000
   render_mode: "human"
 
@@ -13,9 +13,9 @@ forklift:
   wheelbase: 1.2
   track_width: 0.8
   max_steering_angle: 30
-  max_speed: 3.0
+  max_speed: 3.5
   max_fork_height: 2.0
-  fork_lift_speed: 0.25
+  fork_lift_speed: 0.3
 
 perception:
   camera:
@@ -24,9 +24,9 @@ perception:
     height: 480
     fps: 30
   lidar:
-    enabled: false
-    range: 10.0
-    num_points: 360
+    enabled: true
+    range: 15.0
+    num_points: 720
 
 causal_graph:
   nodes:
@@ -55,16 +55,16 @@ counterfactual:
   num_alternatives: 9
   rollout_steps: 60
   score_weights:
-    stability: 0.35
+    stability: 0.40
     success_rate: 0.35
-    efficiency: 0.30
+    efficiency: 0.25
 
 controller:
   pid:
-    kp: 2.5
-    ki: 0.12
-    kd: 0.04
-  max_steering_rate: 25
+    kp: 3.2
+    ki: 0.18
+    kd: 0.08
+  max_steering_rate: 30
 
 logging:
   level: "INFO"
