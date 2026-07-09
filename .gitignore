@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 大型数据文件
+data/test_audio/
+data/raw/
+checkpoints/
+*.zip
+*.tar.gz
+*.pt
+*.pth
+
+# 临时文件
+submission/
+submission_*.tar.gz
+*.log
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

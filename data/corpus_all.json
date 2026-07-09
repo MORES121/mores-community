@@ -1,0 +1,887 @@
+[
+  {
+    "text": "今日香港天氣炎熱，最高氣溫達33度",
+    "source": "news"
+  },
+  {
+    "text": "政府宣布新一輪防疫措施",
+    "source": "news"
+  },
+  {
+    "text": "本港股市反覆上升，成交額增加",
+    "source": "news"
+  },
+  {
+    "text": "教育局公布新學年安排",
+    "source": "news"
+  },
+  {
+    "text": "警方呼籲市民注意網絡安全",
+    "source": "news"
+  },
+  {
+    "text": "運輸署提醒駕駛人士注意交通安全",
+    "source": "news"
+  },
+  {
+    "text": "醫管局加強醫院防疫措施",
+    "source": "news"
+  },
+  {
+    "text": "天文台預測未來數日持續有雨",
+    "source": "news"
+  },
+  {
+    "text": "多個商場推出夏日優惠活動",
+    "source": "news"
+  },
+  {
+    "text": "市民關注通脹對生活嘅影響",
+    "source": "news"
+  },
+  {
+    "text": "專家建議市民多做運動保持健康",
+    "source": "news"
+  },
+  {
+    "text": "學校陸續舉辦畢業典禮",
+    "source": "news"
+  },
+  {
+    "text": "政府推動智慧城市發展計劃",
+    "source": "news"
+  },
+  {
+    "text": "市民可透過手機應用程式查詢服務",
+    "source": "news"
+  },
+  {
+    "text": "本港旅遊業逐步復蘇",
+    "source": "news"
+  },
+  {
+    "text": "飲食業界推出多項優惠吸引顧客",
+    "source": "news"
+  },
+  {
+    "text": "警方加強巡邏確保節日安全",
+    "source": "news"
+  },
+  {
+    "text": "衛生署呼籲市民接種疫苗",
+    "source": "news"
+  },
+  {
+    "text": "教育局推動國情教育",
+    "source": "news"
+  },
+  {
+    "text": "多個團體舉辦文化活動",
+    "source": "news"
+  },
+  {
+    "text": "早晨",
+    "source": "daily"
+  },
+  {
+    "text": "你好",
+    "source": "daily"
+  },
+  {
+    "text": "食咗飯未",
+    "source": "daily"
+  },
+  {
+    "text": "去邊度",
+    "source": "daily"
+  },
+  {
+    "text": "做咩嘢",
+    "source": "daily"
+  },
+  {
+    "text": "點解",
+    "source": "daily"
+  },
+  {
+    "text": "點樣",
+    "source": "daily"
+  },
+  {
+    "text": "幾時",
+    "source": "daily"
+  },
+  {
+    "text": "邊個",
+    "source": "daily"
+  },
+  {
+    "text": "咩事",
+    "source": "daily"
+  },
+  {
+    "text": "冇問題",
+    "source": "daily"
+  },
+  {
+    "text": "好快",
+    "source": "daily"
+  },
+  {
+    "text": "慢慢",
+    "source": "daily"
+  },
+  {
+    "text": "小心",
+    "source": "daily"
+  },
+  {
+    "text": "加油",
+    "source": "daily"
+  },
+  {
+    "text": "恭喜",
+    "source": "daily"
+  },
+  {
+    "text": "多謝",
+    "source": "daily"
+  },
+  {
+    "text": "對唔住",
+    "source": "daily"
+  },
+  {
+    "text": "唔緊要",
+    "source": "daily"
+  },
+  {
+    "text": "好開心",
+    "source": "daily"
+  },
+  {
+    "text": "好難過",
+    "source": "daily"
+  },
+  {
+    "text": "好驚",
+    "source": "daily"
+  },
+  {
+    "text": "好嬲",
+    "source": "daily"
+  },
+  {
+    "text": "好累",
+    "source": "daily"
+  },
+  {
+    "text": "好飽",
+    "source": "daily"
+  },
+  {
+    "text": "好肚餓",
+    "source": "daily"
+  },
+  {
+    "text": "好口渴",
+    "source": "daily"
+  },
+  {
+    "text": "好眼瞓",
+    "source": "daily"
+  },
+  {
+    "text": "好精神",
+    "source": "daily"
+  },
+  {
+    "text": "好靚",
+    "source": "daily"
+  },
+  {
+    "text": "人生有幾多個十年",
+    "source": "movie"
+  },
+  {
+    "text": "做人最緊要係開心",
+    "source": "movie"
+  },
+  {
+    "text": "我哋係一家人",
+    "source": "movie"
+  },
+  {
+    "text": "呢個世界冇免費午餐",
+    "source": "movie"
+  },
+  {
+    "text": "做人要有骨氣",
+    "source": "movie"
+  },
+  {
+    "text": "機會係留俾有準備嘅人",
+    "source": "movie"
+  },
+  {
+    "text": "人生如戲，戲如人生",
+    "source": "movie"
+  },
+  {
+    "text": "珍惜眼前人",
+    "source": "movie"
+  },
+  {
+    "text": "笑一笑，世界更美妙",
+    "source": "movie"
+  },
+  {
+    "text": "夢想係要靠自己實現",
+    "source": "movie"
+  },
+  {
+    "text": "友誼永固",
+    "source": "movie"
+  },
+  {
+    "text": "愛要及時",
+    "source": "movie"
+  },
+  {
+    "text": "人生冇Take Two",
+    "source": "movie"
+  },
+  {
+    "text": "努力就會成功",
+    "source": "movie"
+  },
+  {
+    "text": "堅持到最後",
+    "source": "movie"
+  },
+  {
+    "text": "人生總有起跌",
+    "source": "movie"
+  },
+  {
+    "text": "希望永遠在明天",
+    "source": "movie"
+  },
+  {
+    "text": "相信自己",
+    "source": "movie"
+  },
+  {
+    "text": "勇氣可嘉",
+    "source": "movie"
+  },
+  {
+    "text": "智慧勝過財富",
+    "source": "movie"
+  },
+  {
+    "text": "讀書破萬卷，下筆如有神",
+    "source": "literature"
+  },
+  {
+    "text": "學海無涯，唯勤是岸",
+    "source": "literature"
+  },
+  {
+    "text": "千里之行，始於足下",
+    "source": "literature"
+  },
+  {
+    "text": "不積跬步，無以至千里",
+    "source": "literature"
+  },
+  {
+    "text": "天行健，君子以自強不息",
+    "source": "literature"
+  },
+  {
+    "text": "地勢坤，君子以厚德載物",
+    "source": "literature"
+  },
+  {
+    "text": "三人行，必有我師焉",
+    "source": "literature"
+  },
+  {
+    "text": "己所不欲，勿施於人",
+    "source": "literature"
+  },
+  {
+    "text": "學而時習之，不亦說乎",
+    "source": "literature"
+  },
+  {
+    "text": "知之為知之，不知為不知",
+    "source": "literature"
+  },
+  {
+    "text": "溫故而知新，可以為師矣",
+    "source": "literature"
+  },
+  {
+    "text": "敏而好學，不恥下問",
+    "source": "literature"
+  },
+  {
+    "text": "君子和而不同",
+    "source": "literature"
+  },
+  {
+    "text": "仁者愛人",
+    "source": "literature"
+  },
+  {
+    "text": "禮之用，和為貴",
+    "source": "literature"
+  },
+  {
+    "text": "信近於義，言可復也",
+    "source": "literature"
+  },
+  {
+    "text": "恭近於禮，遠恥辱也",
+    "source": "literature"
+  },
+  {
+    "text": "君子求諸己，小人求諸人",
+    "source": "literature"
+  },
+  {
+    "text": "古之學者為己，今之學者為人",
+    "source": "literature"
+  },
+  {
+    "text": "士不可以不弘毅，任重而道遠",
+    "source": "literature"
+  },
+  {
+    "text": "你最近點樣啊",
+    "source": "dialogue"
+  },
+  {
+    "text": "我幾好，你呢",
+    "source": "dialogue"
+  },
+  {
+    "text": "我都唔錯，多謝關心",
+    "source": "dialogue"
+  },
+  {
+    "text": "聽日有冇時間一齊食飯",
+    "source": "dialogue"
+  },
+  {
+    "text": "好呀，幾點喺邊度等",
+    "source": "dialogue"
+  },
+  {
+    "text": "七點半喺地鐵站見",
+    "source": "dialogue"
+  },
+  {
+    "text": "冇問題，到時見",
+    "source": "dialogue"
+  },
+  {
+    "text": "你鍾意食咩嘢",
+    "source": "dialogue"
+  },
+  {
+    "text": "我鍾意食廣東菜",
+    "source": "dialogue"
+  },
+  {
+    "text": "我都係，尤其係點心",
+    "source": "dialogue"
+  },
+  {
+    "text": "嗰間酒樓啲點心好出名",
+    "source": "dialogue"
+  },
+  {
+    "text": "咁我哋就去嗰度啦",
+    "source": "dialogue"
+  },
+  {
+    "text": "好，就咁決定",
+    "source": "dialogue"
+  },
+  {
+    "text": "你最近有冇睇戲",
+    "source": "dialogue"
+  },
+  {
+    "text": "有呀，睇咗套好精彩嘅戲",
+    "source": "dialogue"
+  },
+  {
+    "text": "講嚟聽吓",
+    "source": "dialogue"
+  },
+  {
+    "text": "係講緊一個追夢嘅故事",
+    "source": "dialogue"
+  },
+  {
+    "text": "聽落好似幾有意思",
+    "source": "dialogue"
+  },
+  {
+    "text": "係呀，好勵志㗎",
+    "source": "dialogue"
+  },
+  {
+    "text": "咁我都想去睇",
+    "source": "dialogue"
+  },
+  {
+    "text": "政府宣布新一轮消费券发放安排，市民下月可领取",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "天文台预测下周气温骤降，呼吁长者注意保暖",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "运输署优化过海隧道分流措施，料可缓解拥堵",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "教育局公布中小学复课安排，学生需定期检测",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "医管局增拨资源应对冬季流感高峰",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "警方破获跨国诈骗集团，涉案金额逾亿元",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "本港失业率回落至3.5%，创近年新低",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "政府推绿色金融计划，鼓励企业减排",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "科技园公司培育初创企业数目创新高",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "旅发局推新宣传片吸引海外游客",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "市区重建局启动新一轮旧楼重建计划",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "海关检获走私货物总值逾千万",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "水务署提醒市民节约用水应对干旱",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "食环署加强巡查确保食肆卫生",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "社署推长者家居照顾新措施",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "康文署举办多项暑期活动供市民参加",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "市建局开展旺角重建项目咨询",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "环保署推出垃圾收费试点计划",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "运输署优化交通灯系统提升效率",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "民政事务处举办社区共融活动",
+    "source": "news",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "早晨，今日天气好好",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "食咗饭未？一齐去饮茶啦",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "唔该，请问呢度点去",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我今日好开心，因为见到老朋友",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "听日放假，打算去行山",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "呢间餐厅啲烧鹅好出名",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我要两个叉烧包同埋一杯热奶茶",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "唔该帮我影张相，谢谢",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "呢个星期好忙，日日加班",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "周末约咗朋友睇戏",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我最近学紧煲汤，好好饮",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "呢件衫好靓，几多钱？",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "多谢你嘅帮忙，我好感激",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "听日要早起，今晚早点瞓",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我哋一齐去行街买嘢啦",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "呢度啲风景真系好靓",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我中意食朱古力同雪糕",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "最近天气好热，记得饮水",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "呢本书好好睇，推荐俾你",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我哋下次再约食饭",
+    "source": "daily",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "人生有幾多個十年，最緊要係開心",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "做人要有骨氣，唔可以輕易放棄",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "珍惜眼前人，活在當下",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "友誼永固，感謝有你",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "堅持到底，就一定會成功",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "夢想係要靠自己雙手去實現",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "笑一笑，世界更美好",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "愛要及時，唔好等失去先後悔",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "仁者愛人，禮者敬人",
+    "source": "culture",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "你好，請問你叫咩名？",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我叫小明，你呢？",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我係阿華，好高興認識你",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "你最近點樣？有冇去旅行？",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我上個月去咗日本，好開心",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "日本有咩好玩？",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我去咗東京同大阪，食咗好多好嘢",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "聽落好正！我都想去",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "下次我哋可以一齊去",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "好呀！一言為定",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "你平時有咩興趣？",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我鍾意影相同煮嘢食",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我都鍾意煮嘢，可以交流下",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "好提議！我整幾味俾你試下",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "真係？我好期待！",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "你平時去開邊度買餸？",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我去街市買，新鮮啲",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我都覺得街市啲嘢新鮮",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "下次一齊去買餸啦",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "好，就咁決定！",
+    "source": "dialogue",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "今日去咗一間新開嘅茶餐廳，啲奶茶好飲",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "呢間酒樓嘅點心好出名，蝦餃燒賣好正",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "我中意食乾炒牛河，夠鑊氣",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "煲仔飯冬天食最暖胃",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "雲吞麵係香港特色美食",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "蛋撻配奶茶，經典下午茶",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "菠蘿包加牛油，簡單又美味",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "咖喱魚蛋係街頭小食之王",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "雞蛋仔外脆內軟，好受歡迎",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "格仔餅加煉奶花生醬，回味無窮",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "腸粉滑溜，配甜醬麻醬最夾",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "燒鵝皮脆肉嫩，必食推介",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "臘味煲仔飯香噴噴，令人垂涎",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "西多士配糖漿，邪惡又滿足",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "車仔麵可以自由配搭，好方便",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "避風塘炒蟹好惹味，辣得好過癮",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "楊枝甘露清甜解渴，夏天最啱",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "紅豆沙糖水暖胃又暖心",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "芝麻糊香甜濃郁，傳統糖水",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  },
+  {
+    "text": "薑汁湯圓暖身又甜蜜",
+    "source": "food",
+    "collected_at": "2026-07-04T16:38:20.885922"
+  }
+]
