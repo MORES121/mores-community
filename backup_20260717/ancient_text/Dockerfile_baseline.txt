@@ -1,0 +1,8 @@
+FROM ccr.ccs.tencentyun.com/competition/icrc_2025_ancient_text_baseline:paddle_gpu
+
+WORKDIR /app
+COPY inference_baseline.py .
+COPY run_baseline.sh .
+RUN chmod +x run_baseline.sh
+
+CMD ["/app/run_baseline.sh"]

@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: fusion-control-environment
+Version: 0.1.0
+Summary: HFM competition environment for fusion control
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Requires-Dist: gymnasium>=0.29
+Requires-Dist: pyyaml>=5.0
+Provides-Extra: baseline
+Requires-Dist: stable-baselines3>=2.0; extra == "baseline"
+Requires-Dist: pyyaml>=5.0; extra == "baseline"
+Requires-Dist: onnx>=1.16; extra == "baseline"
+Requires-Dist: torch>=2.0; extra == "baseline"
+Provides-Extra: xpt
+Requires-Dist: matplotlib>=3.5; extra == "xpt"
+Requires-Dist: scipy>=1.9; extra == "xpt"
+Dynamic: license-file
+
+# RNA 蛋白结构预测 — 墨睿思 MORES 最优得分方案
+
+## 比赛成绩
+- 最优提交分数：0.188
+- 系统能力：全自动 / 可解释 / 低算力
+
+## 核心文件
+- `mores_light.pt`：轻量模型（2.5万参数）
+- `generate_report.py`：全自动靶点评估报告
+- `mores_local_infer.py`：本地离线推理
+- `mores_batch_rank.py`：批量靶点排序
+
+## 运行环境
+- Python 3.8+
+- 依赖：`torch`, `numpy`, `json`
+
+## 快速运行
+```bash
+python mores_local_infer.py
+MIT License
